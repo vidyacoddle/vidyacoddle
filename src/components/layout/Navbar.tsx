@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -32,7 +34,7 @@ export function Navbar() {
       <div className="h-16 max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <img src="/logo.png" alt="Vidya Coddletech Logo" className="h-7 w-7 object-contain transition-transform group-hover:scale-105" />
+            <Image src={logo} alt="Vidya Coddletech Logo" width={28} height={28} className="h-7 w-7 object-contain transition-transform group-hover:scale-105" />
             <span className="font-display font-bold tracking-tight text-foreground text-xl">
               Vidya Coddletech
             </span>

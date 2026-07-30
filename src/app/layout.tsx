@@ -25,13 +25,6 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Vidya Coddletech | Infrastructure Architecture",
   description: "B2B Infrastructure & Tech Agency",
-  icons: {
-    icon: [
-      { url: "/icon.png", type: "image/png" },
-      { url: "/favicon.ico" }
-    ],
-    apple: "/icon.png",
-  },
 };
 
 export const viewport = {
