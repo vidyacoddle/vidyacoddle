@@ -31,7 +31,8 @@ export function Navbar() {
     <header className={`fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur transition-all duration-300 ${scrolled ? 'border-b border-border' : 'border-b border-transparent'}`}>
       <div className="h-16 max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <img src="/logo.png" alt="Vidya Coddletech Logo" className="h-7 w-7 object-contain transition-transform group-hover:scale-105" />
             <span className="font-display font-bold tracking-tight text-foreground text-xl">
               Vidya Coddletech
             </span>
