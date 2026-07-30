@@ -94,5 +94,5 @@ We don't do templated SaaS; we build your unfair advantage. If you're ready to d
 
 ---
 <div align="center">
-  <i>Built with ❤️ by the Vidya Coddletech Engineering Force</i>
+  <i>Built with ❤️ by the Vidya Coddletech Engineering Force Co-Powered By CYBER SOULZ</i>
 </div>
