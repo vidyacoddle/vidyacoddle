@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ShieldCheck, Cpu, Code2, Globe, Database, Network } from "lucide-react";
 import * as React from "react";
+import { motion } from "framer-motion";
 
 export function CoreArchitectureFeatures() {
   const features = [
@@ -56,7 +57,11 @@ const Feature = ({
   index: number;
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
       className={cn(
         "flex flex-col lg:border-r py-10 relative group/feature border-zinc-200",
         (index === 0 || index === 3) && "lg:border-l border-zinc-200",
@@ -64,23 +69,23 @@ const Feature = ({
       )}
     >
       {index < 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-zinc-100 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
       )}
       {index >= 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-zinc-100 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-zinc-900">
+      <div className="mb-4 relative z-10 px-10 text-primary">
         {icon}
       </div>
       <div className="text-xl font-bold mb-4 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-zinc-200 group-hover/feature:bg-zinc-900 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-zinc-950 font-display">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground font-display">
           {title}
         </span>
       </div>
-      <p className="text-base text-zinc-500 max-w-xs relative z-10 px-10 leading-relaxed">
+      <p className="text-base text-[#6B6459] max-w-xs relative z-10 px-10 leading-relaxed">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };

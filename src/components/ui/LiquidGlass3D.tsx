@@ -33,7 +33,7 @@ function GlassShape() {
           temporalDistortion={0.1}
           color="#ffffff"
           attenuationDistance={2}
-          attenuationColor="#a78bfa"
+          attenuationColor="#FF5722"
         />
       </mesh>
     </Float>
@@ -48,10 +48,10 @@ function SceneBackground() {
         args={[20, 20]} 
         cellSize={1} 
         cellThickness={1} 
-        cellColor="#7c3aed" 
+        cellColor="#FF5722" 
         sectionSize={5} 
         sectionThickness={1.5} 
-        sectionColor="#4c1d95" 
+        sectionColor="#D6491E" 
         fadeDistance={20} 
         fadeStrength={1} 
       />
@@ -59,14 +59,14 @@ function SceneBackground() {
       <Float speed={1} rotationIntensity={0.5} floatIntensity={1}>
         <mesh position={[0.5, 2, -4]}>
           <sphereGeometry args={[1, 32, 32]} />
-          <meshStandardMaterial color="#7c3aed" emissive="#7c3aed" emissiveIntensity={2} toneMapped={false} />
+          <meshStandardMaterial color="#FF5722" emissive="#FF5722" emissiveIntensity={2} toneMapped={false} />
         </mesh>
       </Float>
       
       <Float speed={1.5} rotationIntensity={1} floatIntensity={1}>
         <mesh position={[4.5, -1, -2]}>
           <sphereGeometry args={[0.5, 32, 32]} />
-          <meshStandardMaterial color="#a78bfa" emissive="#a78bfa" emissiveIntensity={2} toneMapped={false} />
+          <meshStandardMaterial color="#F7F3EA" emissive="#D6491E" emissiveIntensity={2} toneMapped={false} />
         </mesh>
       </Float>
     </>
